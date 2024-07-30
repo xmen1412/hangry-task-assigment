@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mage:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hangry_etl
+    command: mage start hangry_project
+    environment:
+      - MAGE_DATA_DIR=/home/src
+    ports:
+      - 6789:6789
+    volumes:
+      - ./data:/home/src/data
