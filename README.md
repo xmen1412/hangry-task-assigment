@@ -23,12 +23,16 @@ just run the service with this command an its able to run a mage ai locally.:
 docker-compose up -d
 ```
 
+open your local on this address http://localhost:6789/
+
 
 ## Results
 
-for a ETL results Visualatisaton dashboard it will use google sheet for a easier to access it
+for a ETL results Visualatisaton dashboard it will use google looker for a easier to access it
 
-[Link](https://docs.google.com/spreadsheets/d/1TVQUSlBCqfQTx20PA0F4DShQ2VlK1kOwwX-fm7zsDLw/edit?gid=0#gid=0)
+[Raw data](https://docs.google.com/spreadsheets/d/1TVQUSlBCqfQTx20PA0F4DShQ2VlK1kOwwX-fm7zsDLw/edit?gid=0#gid=0)
+
+[Link] [https://lookerstudio.google.com/reporting/bbe39b91-45fe-4394-8609-3f991fa371dc]
 
 
 ## Source 

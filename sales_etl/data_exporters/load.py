@@ -5,9 +5,6 @@ import matplotlib.pyplot as plt
 from pandas import DataFrame
 
 
-
-
-
 if 'data_exporter' not in globals():
     from mage_ai.data_preparation.decorators import data_exporter
 
@@ -22,7 +19,7 @@ def export_data(data, *args, **kwargs):
     print(f"Current working directory: {current_dir}")
 
     # Specify the directory where you want to save the CSV files and plots
-    output_dir = os.path.join(current_dir, 'output')
+    output_dir = os.path.join(current_dir, 'data')
 
     # Ensure the output directory exists
     os.makedirs(output_dir, exist_ok=True)
@@ -43,6 +40,12 @@ def export_data(data, *args, **kwargs):
     # Export YTD sales
     export_to_csv(data['ytd_sales'], 'ytd_sales.csv', output_dir)
     plot_ytd_sales(data['ytd_sales'], 'YTD Sales', 'ytd_sales_plot.png', output_dir)
+
+
+
+    # Export raw data for a more customable thing 
+
+    export_to_csv(data['raw_sales'], 'raw_sales.csv', output_dir)
 
     print(f"All files should be saved in: {output_dir}")
     print(f"Contents of the output directory: {os.listdir(output_dir)}")
